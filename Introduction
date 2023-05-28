@@ -4,6 +4,7 @@ def lang():     // defining function
 
 print("Example to define Function")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
 lang()         // calling function
 ___________________________________________________________________________
 output
@@ -20,8 +21,10 @@ def add(n1,n2):
     print("Added value is     :",ans)
 
 print("Program to Add two numbers")
+
 a = int(input("Nter first number  : "))
 b = int(input("Nter second number : "))
+
 add(a,b)
 ___________________________________________________________________________
 output
@@ -38,8 +41,10 @@ def add(n1,n2):
     return ans
 
 print("Program to Add two numbers")
+
 a = int(input("Nter first number  : "))
 b = int(input("Nter second number : "))
+
 print("Added value is     :",add(a,b))
 ___________________________________________________________________________
 output
@@ -49,6 +54,80 @@ Nter second number : 15
 Added value is     : 25
 ___________________________________________________________________________
 
+
+
+# 5. Function with Default Argument
+def add(n1,n2 = 30):
+    ans = n1+n2
+    return ans
+
+print("Program to Add two numbers")
+
+a = int(input("Nter first number  : "))
+b = int(input("Nter second number : "))
+
+print("Added value with user argument    :",add(a,b))
+
+print("Added value with default argument :",add(a))
+___________________________________________________________________________
+output
+Program to Add two numbers
+Nter first number  : 5
+Nter second number : 4
+Added value with user argument    : 9
+Added value with default argument : 35
+___________________________________________________________________________
+
+
+
+# 6. Keyword Argument
+def add(n1,n2):
+    ans = n1+n2
+    return ans
+
+print("Program to Add two numbers")
+
+a = int(input("Nter first number  : "))
+b = int(input("Nter second number : "))
+
+print("Added value without keyword argument    :",add(a,b))
+
+print("Added value with keyword argument       :",add(n2=a,n1=b))
+___________________________________________________________________________
+output
+Program to Add two numbers
+Nter first number  : 6
+Nter second number : 4
+Added value without keyword argument    : 10
+Added value with keyword argument       : 10
+___________________________________________________________________________
+
+
+# 7. Arbitrary Argument
+def add(*n):
+    ans = 0
+    for i in n:
+        ans = ans + i
+    return ans
+
+print("Program to Add Numbers")
+
+a = int(input("Nter first number  : "))
+b = int(input("Nter second number : "))
+c = int(input("Nter second number : "))
+
+print("Added value without keyword argument    :",add(a,b))
+
+print("Added value with keyword argument       :",add(a,b,c))
+___________________________________________________________________________
+output
+Program to Add Numbers
+Nter first number  : 2
+Nter second number : 3
+Nter second number : 4
+Added value without keyword argument    : 5
+Added value with keyword argument       : 9
+___________________________________________________________________________
 
 
 
