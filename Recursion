@@ -44,3 +44,95 @@ _____________________________________________________________
 
 
 
+# 3. Simple Lambda
+greeting = lambda : print ('Welcome to Programming')
+greeting()
+_____________________________________________________________
+output
+Welcome to Programming
+_____________________________________________________________
+
+
+
+# 4. lambda Function with an Argument
+square_no = lambda sqrn : print('Square of {} is {}'.format(sqrn,sqrn**2))
+
+nr = int(input("Nter the number to find square : "))
+square_no(nr)
+_____________________________________________________________
+output
+Nter the number to find square : 6
+Square of 6 is 36
+_____________________________________________________________
+
+
+# 5. Local and Global definition
+nr = 10  
+
+def number( ):    
+    nr = 50    
+    print( "Value inside the function : ", nr)    
+    
+  
+number()    
+print( "Value outside the function:", nr)    
+_____________________________________________________________
+output
+Value inside the function :  50
+Value outside the function: 10
+_____________________________________________________________
+
+
+# 6. Access Global Variable
+nr = 5
+
+def lucky_nr():
+    print("My Lucky Number :") 
+    print(nr)
+
+lucky_nr()
+_____________________________________________________________
+output
+My Lucky Number :
+5
+_____________________________________________________________
+
+
+
+# 7. Modify Global Variable
+nr = 5
+
+def lucky_nr():
+    print("My Lucky Number :") 
+    nr = nr + 4
+    print(nr)
+
+lucky_nr()
+_____________________________________________________________
+output
+My Lucky Number :
+Traceback (most recent call last):
+  File "/home/main.py", line 9, in <module>
+    lucky_nr()
+  File "/home/main.py", line 6, in lucky_nr
+    nr = nr + 4
+UnboundLocalError: local variable 'nr' referenced before assignment
+_____________________________________________________________
+
+
+
+# 8. Modify Global Variable - using Global Keyword
+nr = 5
+
+def lucky_nr():
+    global nr
+    print("My Lucky Number :") 
+    nr = nr + 4
+    print(nr)
+
+lucky_nr()
+_____________________________________________________________
+output
+My Lucky Number :
+9
+_____________________________________________________________
