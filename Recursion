@@ -1,0 +1,46 @@
+# 1. Recursion - count down
+def countDown(n):
+    print(n)
+    if n == 0:
+        print('Here we go!!!!!!')
+        return
+    else:
+        countDown(n - 1)
+
+print("Count Down starts....")
+countDown(4)
+
+_____________________________________________________________
+output
+Count Down starts....
+4
+3
+2
+1
+0
+Here we go!!!!!!
+_____________________________________________________________
+
+
+# 2. Recursion - Factorial
+def fact(n):
+    if n == 1:
+        return n
+    else:
+        return (n * fact(n-1))
+
+print("Factorial of the number")
+print("~~~~~~~~~~~~~~~~~~~~~~~")
+
+fc = int(input("Nter number to find factorial : "))
+print("Factorial of {} is {}".format(fc,fact(fc)))
+_____________________________________________________________
+output
+Factorial of the number
+~~~~~~~~~~~~~~~~~~~~~~~
+Nter number to find factorial : 5
+Factorial of 5 is 120
+_____________________________________________________________
+
+
+
