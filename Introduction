@@ -1,0 +1,54 @@
+# 1. Simple Function
+def lang():     // defining function
+    print("Python is dynamic programming language ")
+
+print("Example to define Function")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~")
+lang()         // calling function
+___________________________________________________________________________
+output
+Example to define Function
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Python is dynamic programming language 
+___________________________________________________________________________
+
+
+
+# 2. Function Argument without return
+def add(n1,n2):
+    ans = n1+n2
+    print("Added value is     :",ans)
+
+print("Program to Add two numbers")
+a = int(input("Nter first number  : "))
+b = int(input("Nter second number : "))
+add(a,b)
+___________________________________________________________________________
+output
+Program to Add two numbers
+Nter first number  : 5
+Nter second number : 4
+Added value is     : 9
+___________________________________________________________________________
+
+
+# 3. Function Argument with return
+def add(n1,n2):
+    ans = n1+n2
+    return ans
+
+print("Program to Add two numbers")
+a = int(input("Nter first number  : "))
+b = int(input("Nter second number : "))
+print("Added value is     :",add(a,b))
+___________________________________________________________________________
+output
+Program to Add two numbers
+Nter first number  : 10       
+Nter second number : 15
+Added value is     : 25
+___________________________________________________________________________
+
+
+
+
